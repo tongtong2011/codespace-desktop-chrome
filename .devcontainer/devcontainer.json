@@ -5,5 +5,10 @@
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "forwardPorts": [6080],
-  "postCreateCommand": "sudo apt update && sudo apt install -y chromium-browser"
+  "postCreateCommand": "sudo sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list && sudo apt update && sudo apt install -y chromium-browser",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
 }
